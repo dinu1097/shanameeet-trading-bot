@@ -1,0 +1,32 @@
+ Core Logic:
+1. Initial Trade Execution:
+
+Open 1 Long with the broker offering the lowest Ask.
+
+Open 1 Short with the broker offering the highest Bid.
+
+Lot size is user-defined (e.g., 0.01).
+
+2. Continuous Monitoring & Replacement:
+
+EA monitors all brokers in real-time.
+
+Replace Long if a new broker has Ask < current Long Bid by X points.
+
+Replace Short if a new broker has Bid > current Short Ask by X points.
+
+After replacement, wait X seconds before the next search (user-defined).
+
+3. Broker Disconnection Handling:
+
+Pause all trading if any broker disconnects.
+
+Show “Stopped” (Red) until manually restarted.
+
+Don’t close trades, just halt operations.
+
+4. Start/Stop Button:
+
+“Started” (Green) when active.
+
+“Stopped” (Red) on manual stop or disconnection.
